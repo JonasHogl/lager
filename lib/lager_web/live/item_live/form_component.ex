@@ -22,6 +22,7 @@ defmodule LagerWeb.ItemLive.FormComponent do
         <.input field={@form[:name]} type="text" label="Name" />
         <.input field={@form[:amount]} type="number" label="Amount" />
         <.input field={@form[:total_price]} type="number" label="Total price" />
+        <.input field={@form[:best_before]} type="date" label="Best before" />
         <:actions>
           <.button phx-disable-with="Saving...">Save Item</.button>
         </:actions>

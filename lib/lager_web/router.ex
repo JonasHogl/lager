@@ -18,6 +18,12 @@ defmodule LagerWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/item_id", ItemsLive.Index, :index
+    live "/item_id/new", ItemsLive.Index, :new
+    live "/item_id/:id/edit", ItemsLive.Index, :edit
+
+    live "/item_id/:id", ItemsLive.Show, :show
+    live "/item_id/:id/show/edit", ItemsLive.Show, :edit
   end
 
   # Other scopes may use custom stacks.

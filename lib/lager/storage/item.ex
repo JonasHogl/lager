@@ -6,7 +6,6 @@ defmodule Lager.Storage.Item do
     field :name, :string
     field :amount, :integer
     field :total_price, :integer
-    field :best_before, :date
 
     timestamps(type: :utc_datetime)
   end
@@ -14,7 +13,7 @@ defmodule Lager.Storage.Item do
   @doc false
   def changeset(item, attrs) do
     item
-    |> cast(attrs, [:name, :amount, :total_price, :best_before])
-    |> validate_required([:name, :amount, :total_price, :best_before])
+    |> cast(attrs, [:name, :amount, :total_price])
+    |> validate_required([:name, :amount, :total_price])
   end
 end

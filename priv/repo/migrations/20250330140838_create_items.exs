@@ -6,7 +6,6 @@ defmodule Lager.Repo.Migrations.CreateItems do
       add :name, :string
       add :amount, :integer
       add :total_price, :integer
-      add :best_before, :date
 
       timestamps(type: :utc_datetime)
     end
